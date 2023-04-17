@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -116,7 +115,6 @@ public class Replayer {
 					if (speed == -1 && currentTicks > 0)
 					{
 						executeTick(currentTicks--, false);
-						Bukkit.broadcastMessage("Reversing tick!");
 					}
 					else
 					{
