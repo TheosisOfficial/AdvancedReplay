@@ -114,7 +114,7 @@ public class Replayer {
 					
 					if (speed == -1 && currentTicks > 0)
 					{
-						executeTick(currentTicks--, false);
+						executeTick(currentTicks--, true);
 					}
 					else
 					{
