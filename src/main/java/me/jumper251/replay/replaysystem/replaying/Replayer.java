@@ -111,14 +111,20 @@ public class Replayer {
 				if (Replayer.this.tmpTicks % 1 != 0) return;
 				
 				if (currentTicks < duration) {
-
-					executeTick(currentTicks++, false);
-
-					if ((currentTicks + 2) < duration && speed == 2)  {
+					
+					if (speed == -1 && currentTicks > duration)
+					{
+						executeTick(currentTicks--, false);
+					}
+					else
+					{
 						executeTick(currentTicks++, false);
 
+						if ((currentTicks + 2) < duration && speed == 2)  {
+							executeTick(currentTicks++, false);
+
+						}
 					}
-					
 					updateXPBar();
 				} else {
 					
