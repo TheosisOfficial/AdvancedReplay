@@ -115,6 +115,7 @@ public class Replayer {
 					if (speed == -1 && currentTicks > duration)
 					{
 						executeTick(currentTicks--, false);
+						Bukkit.broadcastMessage("Reversing tick!");
 					}
 					else
 					{
