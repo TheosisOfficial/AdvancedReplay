@@ -94,6 +94,8 @@ public class ReplayListener extends AbstractListener {
 							replayer.setSpeed(0.5D);
 						} else if (replayer.getSpeed() == 0.5D) {
 							 replayer.setSpeed(0.25D);
+						} else if (replayer.getSpeed() == 0.25D) {
+							 replayer.setSpeed(-1D);
 						}
 					}
 					
